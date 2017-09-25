@@ -59,11 +59,14 @@ class ViewController: UIViewController, ARSKViewDelegate {
     func view(_ view: ARSKView, nodeFor anchor: ARAnchor) -> SKNode? {
         // Create and configure a node for the anchor added to the view's session.
         if numberForName == 0 {
-            let labelNode = SKSpriteNode(imageNamed: "lleytonAR")
+            let node = SKSpriteNode(imageNamed: "lleytonAR")
+            node.size = CGSize(width: 40.0, height: 40.0)
+            
             numberForName = 1
-            return labelNode
+            return node
         } else {
             let node = SKSpriteNode(imageNamed: "ilaAR")
+            node.size = CGSize(width: 40.0, height: 40.0)
             numberForName = 0
             return node
         }
