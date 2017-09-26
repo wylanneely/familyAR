@@ -21,17 +21,26 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </arskView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AWa-cx-GCt">
-                                <rect key="frame" x="16" y="617" width="46" height="30"/>
-                                <state key="normal" title="Button"/>
+                                <rect key="frame" x="16" y="617" width="51" height="30"/>
+                                <state key="normal" title="Lleyton"/>
                                 <connections>
                                     <action selector="lleytonButtonTapped:" destination="Zcu-zh-Ckl" eventType="touchUpInside" id="Aae-9d-sBv"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PWl-vS-f3s">
+                                <rect key="frame" x="329" y="617" width="30" height="30"/>
+                                <state key="normal" title="Ila"/>
+                                <connections>
+                                    <action selector="ilaButtonTapped:" destination="Zcu-zh-Ckl" eventType="touchUpInside" id="ll7-a1-PFt"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="DqY-5V-T5v" firstAttribute="bottom" secondItem="gaB-Ca-cMQ" secondAttribute="bottom" id="4d2-yA-z22"/>
+                            <constraint firstItem="gaB-Ca-cMQ" firstAttribute="trailing" secondItem="PWl-vS-f3s" secondAttribute="trailing" constant="16" id="7jE-sM-Lta"/>
                             <constraint firstItem="DqY-5V-T5v" firstAttribute="trailing" secondItem="gaB-Ca-cMQ" secondAttribute="trailing" id="Dhq-Xp-wlx"/>
+                            <constraint firstItem="gaB-Ca-cMQ" firstAttribute="bottom" secondItem="PWl-vS-f3s" secondAttribute="bottom" constant="20" id="M6O-J5-8vQ"/>
                             <constraint firstItem="DqY-5V-T5v" firstAttribute="leading" secondItem="gaB-Ca-cMQ" secondAttribute="leading" id="PGB-j5-hJi"/>
                             <constraint firstItem="DqY-5V-T5v" firstAttribute="top" secondItem="ulX-tD-stJ" secondAttribute="top" id="eHH-La-VNt"/>
                             <constraint firstItem="gaB-Ca-cMQ" firstAttribute="bottom" secondItem="AWa-cx-GCt" secondAttribute="bottom" constant="20" id="kM7-35-n7r"/>

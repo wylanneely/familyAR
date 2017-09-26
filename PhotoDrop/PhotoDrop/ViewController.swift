@@ -13,22 +13,24 @@ import ARKit
 class ViewController: UIViewController, ARSKViewDelegate {
     
     @IBAction func lleytonButtonTapped(_ sender: Any) {
-        
-        
+        self.arAssetName = "lleytonAR"
     }
+    
+    @IBAction func ilaButtonTapped(_ sender: Any) {
+        self.arAssetName = "ilaAR"
+    }
+    
+
     
     @IBOutlet weak var sceneView: ARSKView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         // Set the view's delegate
         sceneView.delegate = self
-        
         // Show statistics such as fps and node count
         sceneView.showsFPS = true
         sceneView.showsNodeCount = true
-        
         // Load the SKScene from 'Scene.sks'
         if let scene = SKScene(fileNamed: "Scene") {
             sceneView.presentScene(scene)
@@ -47,7 +49,6 @@ class ViewController: UIViewController, ARSKViewDelegate {
     
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
-        
         // Pause the view's session
         sceneView.session.pause()
     }
@@ -57,26 +58,15 @@ class ViewController: UIViewController, ARSKViewDelegate {
         // Release any cached data, images, etc that aren't in use.
     }
     
+    private var arAssetName: String = "lleytonAR"
+    
     // MARK: - ARSKViewDelegate
     
-    private var numberForName: Int = 0
-    
     func view(_ view: ARSKView, nodeFor anchor: ARAnchor) -> SKNode? {
-        // Create and configure a node for the anchor added to the view's session.
-        if numberForName == 0 {
-            let node = SKSpriteNode(imageNamed: "lleytonAR")
+            let node = SKSpriteNode(imageNamed: arAssetName)
             node.size = CGSize(width: 40.0, height: 40.0)
-            
-            numberForName = 1
             return node
-        } else {
-            let node = SKSpriteNode(imageNamed: "ilaAR")
-            node.size = CGSize(width: 40.0, height: 40.0)
-            numberForName = 0
-            return node
-        }
-        
-        
+
     }
     
     func session(_ session: ARSession, didFailWithError error: Error) {
