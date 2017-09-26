@@ -1,24 +1,51 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" systemVersion="17A278a" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BV1-FR-VrT">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Zcu-zh-Ckl">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
-        <scene sceneID="tXr-a1-R10">
+        <scene sceneID="XfY-8v-tkh">
             <objects>
-                <viewController id="BV1-FR-VrT" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
-                    <arskView key="view" contentMode="scaleToFill" id="EO5-fy-WZq">
+                <viewController id="Zcu-zh-Ckl" customClass="ViewController" customModule="PhotoDrop" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ulX-tD-stJ">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    </arskView>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <arskView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DqY-5V-T5v">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </arskView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AWa-cx-GCt">
+                                <rect key="frame" x="16" y="617" width="46" height="30"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="lleytonButtonTapped:" destination="Zcu-zh-Ckl" eventType="touchUpInside" id="Aae-9d-sBv"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="DqY-5V-T5v" firstAttribute="bottom" secondItem="gaB-Ca-cMQ" secondAttribute="bottom" id="4d2-yA-z22"/>
+                            <constraint firstItem="DqY-5V-T5v" firstAttribute="trailing" secondItem="gaB-Ca-cMQ" secondAttribute="trailing" id="Dhq-Xp-wlx"/>
+                            <constraint firstItem="DqY-5V-T5v" firstAttribute="leading" secondItem="gaB-Ca-cMQ" secondAttribute="leading" id="PGB-j5-hJi"/>
+                            <constraint firstItem="DqY-5V-T5v" firstAttribute="top" secondItem="ulX-tD-stJ" secondAttribute="top" id="eHH-La-VNt"/>
+                            <constraint firstItem="gaB-Ca-cMQ" firstAttribute="bottom" secondItem="AWa-cx-GCt" secondAttribute="bottom" constant="20" id="kM7-35-n7r"/>
+                            <constraint firstItem="AWa-cx-GCt" firstAttribute="leading" secondItem="gaB-Ca-cMQ" secondAttribute="leading" constant="16" id="ttb-EZ-Y9e"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="gaB-Ca-cMQ"/>
+                    </view>
                     <connections>
-                        <outlet property="sceneView" destination="EO5-fy-WZq" id="YuC-8q-ovz"/>
+                        <outlet property="sceneView" destination="DqY-5V-T5v" id="7Hy-vX-vh4"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="SZV-WD-TEh" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rJ1-RM-b1N" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="991.20000000000005" y="143.47826086956522"/>
         </scene>
     </scenes>
 </document>
