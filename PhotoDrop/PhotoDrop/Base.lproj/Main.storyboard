@@ -20,35 +20,26 @@
                             <arskView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DqY-5V-T5v">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </arskView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AWa-cx-GCt">
-                                <rect key="frame" x="16" y="617" width="51" height="30"/>
-                                <state key="normal" title="Lleyton"/>
-                                <connections>
-                                    <action selector="lleytonButtonTapped:" destination="Zcu-zh-Ckl" eventType="touchUpInside" id="Aae-9d-sBv"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PWl-vS-f3s">
-                                <rect key="frame" x="329" y="617" width="30" height="30"/>
-                                <state key="normal" title="Ila"/>
-                                <connections>
-                                    <action selector="ilaButtonTapped:" destination="Zcu-zh-Ckl" eventType="touchUpInside" id="ll7-a1-PFt"/>
-                                </connections>
-                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="duj-BL-Orz">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="duj-BL-Orz" firstAttribute="top" secondItem="gaB-Ca-cMQ" secondAttribute="top" id="15c-Fg-X0i"/>
                             <constraint firstItem="DqY-5V-T5v" firstAttribute="bottom" secondItem="gaB-Ca-cMQ" secondAttribute="bottom" id="4d2-yA-z22"/>
-                            <constraint firstItem="gaB-Ca-cMQ" firstAttribute="trailing" secondItem="PWl-vS-f3s" secondAttribute="trailing" constant="16" id="7jE-sM-Lta"/>
+                            <constraint firstItem="gaB-Ca-cMQ" firstAttribute="trailing" secondItem="duj-BL-Orz" secondAttribute="trailing" id="8F5-aI-Jpw"/>
                             <constraint firstItem="DqY-5V-T5v" firstAttribute="trailing" secondItem="gaB-Ca-cMQ" secondAttribute="trailing" id="Dhq-Xp-wlx"/>
-                            <constraint firstItem="gaB-Ca-cMQ" firstAttribute="bottom" secondItem="PWl-vS-f3s" secondAttribute="bottom" constant="20" id="M6O-J5-8vQ"/>
+                            <constraint firstItem="gaB-Ca-cMQ" firstAttribute="bottom" secondItem="duj-BL-Orz" secondAttribute="bottom" id="OO5-wP-RS8"/>
                             <constraint firstItem="DqY-5V-T5v" firstAttribute="leading" secondItem="gaB-Ca-cMQ" secondAttribute="leading" id="PGB-j5-hJi"/>
                             <constraint firstItem="DqY-5V-T5v" firstAttribute="top" secondItem="ulX-tD-stJ" secondAttribute="top" id="eHH-La-VNt"/>
-                            <constraint firstItem="gaB-Ca-cMQ" firstAttribute="bottom" secondItem="AWa-cx-GCt" secondAttribute="bottom" constant="20" id="kM7-35-n7r"/>
-                            <constraint firstItem="AWa-cx-GCt" firstAttribute="leading" secondItem="gaB-Ca-cMQ" secondAttribute="leading" constant="16" id="ttb-EZ-Y9e"/>
+                            <constraint firstItem="duj-BL-Orz" firstAttribute="leading" secondItem="gaB-Ca-cMQ" secondAttribute="leading" id="lkj-fW-GGC"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="gaB-Ca-cMQ"/>
                     </view>
                     <connections>
+                        <outlet property="imageView" destination="duj-BL-Orz" id="mbh-g1-Avq"/>
                         <outlet property="sceneView" destination="DqY-5V-T5v" id="7Hy-vX-vh4"/>
                     </connections>
                 </viewController>
