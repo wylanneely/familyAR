@@ -1,40 +1,45 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Zcu-zh-Ckl">
-    <device id="retina4_7" orientation="portrait">
+    <device id="retina4_0" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Text Read View Controller-->
         <scene sceneID="XfY-8v-tkh">
             <objects>
-                <viewController id="Zcu-zh-Ckl" customClass="ViewController" customModule="PhotoDrop" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Zcu-zh-Ckl" customClass="TextReadViewController" customModule="PhotoDrop" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ulX-tD-stJ">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <arskView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DqY-5V-T5v">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <rect key="frame" x="0.0" y="-4" width="320" height="294"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             </arskView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="duj-BL-Orz">
-                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <rect key="frame" x="0.0" y="298" width="320" height="270"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="270" id="yeM-vA-b9m"/>
+                                </constraints>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="duj-BL-Orz" firstAttribute="top" secondItem="gaB-Ca-cMQ" secondAttribute="top" id="15c-Fg-X0i"/>
-                            <constraint firstItem="DqY-5V-T5v" firstAttribute="bottom" secondItem="gaB-Ca-cMQ" secondAttribute="bottom" id="4d2-yA-z22"/>
-                            <constraint firstItem="gaB-Ca-cMQ" firstAttribute="trailing" secondItem="duj-BL-Orz" secondAttribute="trailing" id="8F5-aI-Jpw"/>
-                            <constraint firstItem="DqY-5V-T5v" firstAttribute="trailing" secondItem="gaB-Ca-cMQ" secondAttribute="trailing" id="Dhq-Xp-wlx"/>
-                            <constraint firstItem="gaB-Ca-cMQ" firstAttribute="bottom" secondItem="duj-BL-Orz" secondAttribute="bottom" id="OO5-wP-RS8"/>
-                            <constraint firstItem="DqY-5V-T5v" firstAttribute="leading" secondItem="gaB-Ca-cMQ" secondAttribute="leading" id="PGB-j5-hJi"/>
-                            <constraint firstItem="DqY-5V-T5v" firstAttribute="top" secondItem="ulX-tD-stJ" secondAttribute="top" id="eHH-La-VNt"/>
-                            <constraint firstItem="duj-BL-Orz" firstAttribute="leading" secondItem="gaB-Ca-cMQ" secondAttribute="leading" id="lkj-fW-GGC"/>
+                            <constraint firstItem="duj-BL-Orz" firstAttribute="top" secondItem="DqY-5V-T5v" secondAttribute="bottom" constant="8" symbolic="YES" id="6Xm-V0-WN2"/>
+                            <constraint firstItem="duj-BL-Orz" firstAttribute="leading" secondItem="gaB-Ca-cMQ" secondAttribute="leading" id="AZi-D4-Ure"/>
+                            <constraint firstItem="duj-BL-Orz" firstAttribute="top" secondItem="DqY-5V-T5v" secondAttribute="bottom" constant="8" id="AyV-hg-q2p"/>
+                            <constraint firstItem="duj-BL-Orz" firstAttribute="bottom" secondItem="gaB-Ca-cMQ" secondAttribute="bottom" id="OTa-nJ-r23"/>
+                            <constraint firstItem="duj-BL-Orz" firstAttribute="trailing" secondItem="gaB-Ca-cMQ" secondAttribute="trailing" id="cX9-q5-Y5x"/>
+                            <constraint firstItem="duj-BL-Orz" firstAttribute="leading" secondItem="DqY-5V-T5v" secondAttribute="leading" id="cnu-19-0Hi"/>
+                            <constraint firstItem="duj-BL-Orz" firstAttribute="trailing" secondItem="DqY-5V-T5v" secondAttribute="trailing" id="lSJ-ID-KXU"/>
+                            <constraint firstItem="DqY-5V-T5v" firstAttribute="top" secondItem="ulX-tD-stJ" secondAttribute="topMargin" constant="-24" id="sob-UU-3B3"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="gaB-Ca-cMQ"/>
                     </view>
@@ -45,7 +50,22 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rJ1-RM-b1N" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="991.20000000000005" y="143.47826086956522"/>
+            <point key="canvasLocation" x="990" y="142.6056338028169"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="O8T-62-j6N">
+            <objects>
+                <viewController id="rE6-N1-l71" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="rVS-ui-7kE">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <viewLayoutGuide key="safeArea" id="cZL-s3-LN3"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="38A-pG-NsH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1845" y="143"/>
         </scene>
     </scenes>
 </document>

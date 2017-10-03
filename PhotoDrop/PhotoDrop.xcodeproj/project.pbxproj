@@ -7,21 +7,23 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B26894E11F833A00008458ED /* ARViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B26894E01F833A00008458ED /* ARViewController.swift */; };
 		B2ED8D881F77401000CA00DF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2ED8D871F77401000CA00DF /* AppDelegate.swift */; };
 		B2ED8D8A1F77401000CA00DF /* Scene.sks in Resources */ = {isa = PBXBuildFile; fileRef = B2ED8D891F77401000CA00DF /* Scene.sks */; };
 		B2ED8D8C1F77401000CA00DF /* Scene.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2ED8D8B1F77401000CA00DF /* Scene.swift */; };
-		B2ED8D8E1F77401000CA00DF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2ED8D8D1F77401000CA00DF /* ViewController.swift */; };
+		B2ED8D8E1F77401000CA00DF /* TextReadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2ED8D8D1F77401000CA00DF /* TextReadViewController.swift */; };
 		B2ED8D911F77401000CA00DF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B2ED8D8F1F77401000CA00DF /* Main.storyboard */; };
 		B2ED8D931F77401000CA00DF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B2ED8D921F77401000CA00DF /* Assets.xcassets */; };
 		B2ED8D961F77401000CA00DF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B2ED8D941F77401000CA00DF /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B26894E01F833A00008458ED /* ARViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARViewController.swift; sourceTree = "<group>"; };
 		B2ED8D841F77401000CA00DF /* PhotoDrop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PhotoDrop.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B2ED8D871F77401000CA00DF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B2ED8D891F77401000CA00DF /* Scene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Scene.sks; sourceTree = "<group>"; };
 		B2ED8D8B1F77401000CA00DF /* Scene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scene.swift; sourceTree = "<group>"; };
-		B2ED8D8D1F77401000CA00DF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		B2ED8D8D1F77401000CA00DF /* TextReadViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextReadViewController.swift; sourceTree = "<group>"; };
 		B2ED8D901F77401000CA00DF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B2ED8D921F77401000CA00DF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B2ED8D951F77401000CA00DF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -61,7 +63,8 @@
 				B2ED8D871F77401000CA00DF /* AppDelegate.swift */,
 				B2ED8D891F77401000CA00DF /* Scene.sks */,
 				B2ED8D8B1F77401000CA00DF /* Scene.swift */,
-				B2ED8D8D1F77401000CA00DF /* ViewController.swift */,
+				B2ED8D8D1F77401000CA00DF /* TextReadViewController.swift */,
+				B26894E01F833A00008458ED /* ARViewController.swift */,
 				B2ED8D8F1F77401000CA00DF /* Main.storyboard */,
 				B2ED8D921F77401000CA00DF /* Assets.xcassets */,
 				B2ED8D941F77401000CA00DF /* LaunchScreen.storyboard */,
@@ -143,9 +146,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B2ED8D8E1F77401000CA00DF /* ViewController.swift in Sources */,
+				B2ED8D8E1F77401000CA00DF /* TextReadViewController.swift in Sources */,
 				B2ED8D8C1F77401000CA00DF /* Scene.swift in Sources */,
 				B2ED8D881F77401000CA00DF /* AppDelegate.swift in Sources */,
+				B26894E11F833A00008458ED /* ARViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
