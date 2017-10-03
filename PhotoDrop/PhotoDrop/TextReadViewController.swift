@@ -125,6 +125,7 @@ class TextReadViewController: UIViewController {
     }
     
    @objc func imageViewTapped() {
+    performSegue(withIdentifier: "toAR", sender: self)
         
     }
     
