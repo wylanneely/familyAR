@@ -12,32 +12,31 @@ import AVFoundation
 import SpriteKit
 import ARKit
 
-class TextReadViewController: UIViewController, ARSKViewDelegate {
+class TextReadViewController: UIViewController {
+
     
-    // TEXT STUFF
     @IBOutlet weak var imageView: UIImageView!
     
     override func viewDidLayoutSubviews() {
         imageView.layer.sublayers?[0].frame = imageView.bounds
     }
     
-    
     var session = AVCaptureSession()
     var requests = [VNRequest]()
-    
     
     func startTextDetection() {
         let textRequest = VNDetectTextRectanglesRequest(completionHandler: self.detectTextHandler)
         textRequest.reportCharacterBoxes = true
         self.requests = [textRequest]
-    }    
+    }
+    
     func detectTextHandler(request: VNRequest, error: Error?) {
         guard let observations = request.results else {
             print("no result")
             return
         }
         
-        let result = observations.map({$0 as? VNTextObservation})
+    let result = observations.map({$0 as? VNTextObservation})
         
         DispatchQueue.main.async() {
             self.imageView.layer.sublayers?.removeSubrange(1...)
@@ -54,8 +53,7 @@ class TextReadViewController: UIViewController, ARSKViewDelegate {
             }
         }
     }
-    
-    
+
     func startLiveVideo() {
         //1
         session.sessionPreset = AVCaptureSession.Preset.photo
@@ -126,42 +124,23 @@ class TextReadViewController: UIViewController, ARSKViewDelegate {
         imageView.layer.addSublayer(outline)
     }
     
-    
-            //MARK: - ARKit
-    
-    @IBOutlet weak var sceneView: ARSKView!
+   @objc func imageViewTapped() {
+        
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        sceneView.delegate = self
-        if let scene = SKScene(fileNamed: "Scene") {
-            sceneView.presentScene(scene)
-        }
+        let imageSelector: Selector = "imageViewTapped"
+        let imageTappedGesture = UITapGestureRecognizer(target: self, action: imageSelector)
+        imageTappedGesture.numberOfTapsRequired = 1
+        imageView.addGestureRecognizer(imageTappedGesture)
     }
-    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         startLiveVideo()
         startTextDetection()
-        let configuration = ARWorldTrackingConfiguration()
-        sceneView.session.run(configuration)
     }
-    
-    override func viewWillDisappear(_ animated: Bool) {
-        super.viewWillDisappear(animated)
-        // Pause the view's session
-        sceneView.session.pause()
-    }
-    
-    private var arAssetName: String = "Apple-PNG-image"
-    
-    // MARK: - ARSKViewDelegate
-    
-    func view(_ view: ARSKView, nodeFor anchor: ARAnchor) -> SKNode? {
-            let node = SKSpriteNode(imageNamed: arAssetName)
-            node.size = CGSize(width: 40.0, height: 40.0)
-            return node
-    }
+
 }
 
 extension TextReadViewController: AVCaptureVideoDataOutputSampleBufferDelegate {
